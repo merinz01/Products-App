@@ -1,0 +1,26 @@
+.text-center{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:brown ;
+    text-shadow: 1px 1px 0px white, 
+                 4px 4px 0px rgb(0,0,0,0.2);
+    /* background-color: rgb(245, 172, 16); 
+    border:  2px solid yellow;         */
+        
+}
+
+.header{
+    background-color: rgb(236, 236, 62);
+}
+
+.nav-link{
+    color:brown;
+    font-weight: bold;
+}
+
+#btn{
+    background-color:rgb(245, 172, 16);
+    border-color: yellow;
+    color: brown;
+    font-weight: bold;
+    margin-left: 10px;
+}

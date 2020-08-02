@@ -1,0 +1,16 @@
+form{
+    border: 2px solid rgb(245, 172, 16);
+    box-shadow: 1px 1px 0px yellow, 
+    4px 4px 0px rgb(0,0,0,0.2);;
+}
+.text-center{
+    color: brown; 
+    font-weight: bold;
+    
+}
+/* label{
+    color: brown;  
+} */
+#btn{
+    margin-left: 40%;
+}

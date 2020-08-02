@@ -1,0 +1,50 @@
+<div class="card">
+    <div class="card-header">
+        {{title}}
+    </div>
+    <div class="card-body">
+        <div class="table-responsive ">
+            <table class="table table-bordered table-striped" id="data" >
+                <thead>
+                    <tr>
+                        <th>
+                            <button class="btn btn-danger" (click)='toggleImage()'>
+                                {{showImage? 'Hide' : 'Show'}} Image
+                            </button>
+                        </th>
+                        <th>Product</th>
+                        <th>Code</th>
+                        <th>Available</th>
+                        <th>Price</th>
+                        <th>5Star Ratings</th>
+                        <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let product of products;let i = index'>    
+                        <td><img *ngIf='showImage'
+                            [src]='product.imageUrl'
+                            [title] = 'product.productName'
+                            [style.width.px] = 'imageWidth'
+                            [style.margin.px] = 'imageMargin'>
+                        </td>
+                        <td>{{product.productName}}</td>
+                        <td>{{product.productCode}}</td>
+                        <td>{{product.releaseDate}}</td>
+                        <td>{{product.price}}</td>
+                        <td>{{product.starRating}}</td>
+                       
+                        <td> 
+                            <span class="edit" *ngIf="user.loggedIn()" [routerLink]="['/edit', product._id]">
+                            <button type="button" class="btn btn-danger btn-sm" id="btn" >EDIT</button>
+                          </span>
+                          <span class="delete"  *ngIf="user.loggedIn()" (click)="deleteProducts(product, i)">
+                            <button type="button" class="btn btn-danger btn-sm" id="btn">DELETE</button>
+                          </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

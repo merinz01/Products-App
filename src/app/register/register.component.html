@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+      <span class="anchor" id="formRegister"></span>
+            <br><br>
+            <form>
+                <div class="card-header">
+                    <h2 class="text-center">REGISTER</h2>
+                </div>
+                <br>
+                <div class="card-body">
+                    <div class="form-group d-block ">
+                        <label for="exampleInputUserName">User Name</label>
+                        <input type="text" [(ngModel)]="registeredUser.username" name="username" class="form-control" id="exampleInputUserName" aria-describedby="usernameHelp" placeholder="Merin Lizbeth">
+                      </div>
+                <div class="form-group d-block ">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email"  [(ngModel)]="registeredUser.email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"pattern="^[a-z0-9._%*-]+@[a-z0-9.-]+\.[a-z]{2,5}$" placeholder="eg: merinliz@gmail.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" [(ngModel)]="registeredUser.password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password"><br><br>
+                </div>
+                <button type="submit" (click)="registerUser()" id="btn" class="btn btn-warning">Register</button>
+            </div>
+              </form>
+        </div>
+    </div>
+</div>
+
